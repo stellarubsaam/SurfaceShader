@@ -1775,7 +1775,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -2477152504647978758, guid: f194f933171c16749801b5a617b28dd8, type: 3}
+  - {fileID: 2100000, guid: a36cf2595f8b6cc4aa29e078f7b83d07, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2126,7 +2126,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2541457280464432744, guid: f194f933171c16749801b5a617b28dd8, type: 3}
+  - {fileID: 2100000, guid: d2cdbe3cff371284a899d1a9be16e89c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3685,6 +3685,7 @@ GameObject:
   - component: {fileID: 8296172669046843688}
   - component: {fileID: 8296172669046843689}
   - component: {fileID: 8296172669046843690}
+  - component: {fileID: 8296172669046843691}
   m_Layer: 0
   m_Name: MissFortune
   m_TagString: Untagged
@@ -3704,6 +3705,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe7f07ff5e01b2a42982e750ab5d6c00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetMaterial: {fileID: 2100000, guid: a36cf2595f8b6cc4aa29e078f7b83d07, type: 2}
+  targetMaterial2: {fileID: 2100000, guid: d2cdbe3cff371284a899d1a9be16e89c, type: 2}
   leftShoulder: {fileID: 2440268447614984787}
   rightShoulder: {fileID: 1881797528254623650}
   leftLeg: {fileID: 6778178477865024550}
@@ -3750,8 +3753,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e910089f502a0db4f99f034e793d7a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  turnSpeed: 1
+  speed: 0.6
+  turnSpeed: 0.6
+--- !u!136 &8296172669046843691
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669046843686}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.31528354
+  m_Height: 1.9480839
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.9187064, z: 0.092485905}
 --- !u!4 &8325482146181518871
 Transform:
   m_ObjectHideFlags: 0

@@ -4,20 +4,28 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
-    public GameObject leftShoulder;
-    public GameObject rightShoulder;
-    public GameObject leftLeg;
-    public GameObject rightLeg;
+    public Material targetMaterial;
+    public Material targetMaterial2;
+    public float scale;
 
+    private void Start()
+    {
+        scale =1;
+        targetMaterial.SetFloat("ExpandVector", scale);
+        targetMaterial2.SetFloat("ExpandVector", scale);
+    }
+    private void Update()
+    {
+        Debug.Log(targetMaterial.GetFloat("ExpandVector"));
+    }
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Fruit")
         {
-            Vector3 scale = new Vector3(0.1f, 0, 0.1f);
-            leftLeg.transform.localScale += scale;
-            rightLeg.transform.localScale += scale;
-            leftShoulder.transform.localScale += scale;
-            rightShoulder.transform.localScale += scale;
+            scale += 0.1f;
+            targetMaterial.SetFloat("ExpandVector", scale);
+            targetMaterial2.SetFloat("ExpandVector", scale);
+            
             Destroy(other.gameObject);
         }
     }
